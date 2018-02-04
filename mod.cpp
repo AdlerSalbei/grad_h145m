@@ -1,0 +1,13 @@
+name = "GRAD H145M LUH SOF";
+author = "Gruppe Adler";
+picture = "logo_grad_ca.paa";
+actionName = "Website";
+action = "https://github.com/gruppe-adler/grad_h145m/releases";
+description = "Gruppe Adler H145M LUH SOF";
+logo = "logo_grad_ca.paa";
+logoOver = "logo_grad_ca.paa";
+tooltip = "Gruppe Adler H145M LUH SOF";
+overview = "GRAD H145M LUH SOF.";
+overviewPicture = "Adler.paa";
+overviewText = "";
+overviewFootnote = "";
