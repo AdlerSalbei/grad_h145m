@@ -72,7 +72,7 @@ dssignfile = ""
 prefix = "h145m"
 pbo_name_prefix = "h145m_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "LICENSE", "logo_grad_ca.paa"]
+importantFiles = ["mod.cpp", "logo_grad_ca.paa"]
 versionFiles = []
 
 ciBuild = False # Used for CI builds
