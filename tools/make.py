@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@h145m"
+project = "@grad_h145m"
 project_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -66,11 +66,11 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "h145m"
+key_name = "grad_h145m"
 key = ""
 dssignfile = ""
-prefix = "h145m"
-pbo_name_prefix = "h145m_"
+prefix = "grad_h145m"
+pbo_name_prefix = "grad_h145m_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "logo_grad_ca.paa"]
 versionFiles = []

@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {"h145m"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { QMAINPATCH, "A3_Air_F"};
+        requiredAddons[] = {"grad_h145m_main", "A3_Air_F"};
         authors[] = { "Salbei"};
         VERSION_CONFIG;
     };

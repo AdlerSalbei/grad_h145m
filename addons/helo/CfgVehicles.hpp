@@ -1,409 +1,383 @@
 class CBA_Extended_EventHandlers;
 
-class CfgVehicles {
-    class Helicopter_Base_F;
-    class h145m: Helicopter_Base_F {
-        author = "Salbei";
-        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\I_Heli_light_03_F.jpg";
-        _generalMacro = "B_Heli_H145M_F";
-        crew = "B_Helipilot_F";
-        typicalCargo[] = {"B_Soldier_lite_F"};
-        side = 1;
-        faction = "BLU_F";
-        scope = 2;
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {""};
-        transportSoldier = 4;
-        hideWeaponsCargo = 1;
-        cargoProxyIndexes[] = {3,4,5,6};
-        getInProxyOrder[] = {1,2,3,4,5,6};
-        cargoAction[] = {"passenger_apc_narrow_generic01","passenger_flatground_generic04","passenger_flatground_generic05","passenger_apc_narrow_generic02"};
-        textureList[] = {"Indep",1};
-        displayname = "H145M";
-        driverAction = "pilot_Heli_Light_03";
-        driverInAction = "pilot_Heli_Light_03";
-        precisegetinout = 1;
-        hideWeaponsDriver = 1;
-        hideWeaponsGunner = 1;
-        GetInAction = "pilot_Heli_Light_03_Enter";
-        GetOutAction = "pilot_Heli_Light_03_Exit";
-        cargoCompartments[] = {"Compartment2"};
-        model = QPATH{\data\h145m.p3d};
-        editorSubcategory = "EdSubcat_Helicopters";
-        picture = "\A3\Air_F_EPB\Heli_Light_03\data\UI\Heli_Light_03_CA.paa";
-        icon = "\A3\Air_F_EPB\Heli_Light_03\data\UI\Map_Heli_Light_03_CA.paa";
-        memoryPointTaskMarker = "TaskMarker_1_pos";
-        driveOnComponent[] = {"Skids"};
-        maximumLoad = 2000;
-        fuelCapacity = 742;
-        fuelConsumptionRate = 0.103;
-        radarType = 8;
-        slingLoadMaxCargoMass = 2000;
-        attenuationEffectType = "OpenHeliAttenuation";
-        emptySound[] = {"",0,1};
-        soundGeneralCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",1,1,100};
-        soundGeneralCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_2",1,1,100};
-        soundGeneralCollision3[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_3",1,1,100};
-        soundCrashes[] = {"soundGeneralCollision1",0.33,"soundGeneralCollision2",0.33,"soundGeneralCollision3",0.33};
-        soundLandCrashes[] = {"emptySound",0};
-        soundBuildingCrash[] = {"soundGeneralCollision1",1,"soundGeneralCollision2",1,"soundGeneralCollision3",1};
-        soundArmorCrash[] = {"soundGeneralCollision1",1,"soundGeneralCollision2",1,"soundGeneralCollision3",1};
-        soundWoodCrash[] = {"soundGeneralCollision1",1,"soundGeneralCollision2",1,"soundGeneralCollision3",1};
-        soundBushCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_1",1,1,100};
-        soundBushCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_2",1,1,100};
-        soundBushCollision3[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_3",1,1,100};
-        soundBushCrash[] = {"soundBushCollision1",0.33,"soundBushCollision2",0.33,"soundBushCollision3",0.33};
-        soundWaterCollision1[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_1",1,1,100};
-        soundWaterCollision2[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_2",1,1,100};
-        soundWaterCrashes[] = {"soundWaterCollision1",0.5,"soundWaterCollision2",0.5};
-        soundDammage[] = {"A3\Sounds_F\vehicles\crashes\helis\Heli_crash_default_int_1",10,1};
-        soundGetIn[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\open",1,1};
-        soundGetOut[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\close",1,1,50};
-        soundEngineOnInt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_start_int",0.398107,1};
-        soundEngineOnExt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_start_ext",2.51189,1,600};
-        soundEngineOffInt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_stop_int",0.398107,1};
-        soundEngineOffExt[] = {"A3\Sounds_F\vehicles\air\Heli_Light_03\heli_stop_ext",2.51189,1,600};
-        soundLocked[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",1,1};
-        soundIncommingMissile[] = {"\A3\Sounds_F\vehicles\air\noises\alarm_locked_by_missile_2",0.316228,1};
-        rotorDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_open_1",1,1};
-        rotorDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_ext_1",2.51189,1,150};
-        rotorDamage[] = {"rotorDamageInt","rotorDamageOut"};
-        tailDamageInt[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_tail",1,1};
-        tailDamageOut[] = {"A3\Sounds_F\vehicles\air\noises\heli_damage_tail",1,1,300};
-        tailDamage[] = {"tailDamageInt","tailDamageOut"};
-        landingSoundInt0[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_small_int1",1,1,100};
-        landingSoundInt1[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_small_int2",1,1,100};
-        landingSoundInt[] = {"landingSoundInt0",0.5,"landingSoundInt1",0.5};
-        landingSoundOut0[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext1",1.77828,1,100};
-        landingSoundOut1[] = {"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext2",1.77828,1,100};
-        landingSoundOut[] = {"landingSoundOut0",0.5,"landingSoundOut1",0.5};
-        slingCargoAttach0[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineDownEndINT",1,1};
-        slingCargoAttach1[] = {"A3\Sounds_F\vehicles\air\noises\SL_1hookLock",1,1,80};
-        slingCargoAttach[] = {"slingCargoAttach0","slingCargoAttach1"};
-        slingCargoDetach0[] = {"A3\Sounds_F\vehicles\air\noises\SL_engineUpEndINT",1,1};
-        slingCargoDetach1[] = {"A3\Sounds_F\vehicles\air\noises\SL_1hookUnlock",1,1,80};
-        slingCargoDetach[] = {"slingCargoDetach0","slingCargoDetach1"};
-        slingCargoDetachAir0[] = {"A3\Sounds_F\vehicles\air\noises\SL_unhook_air_int",1,1};
-        slingCargoDetachAir1[] = {"A3\Sounds_F\vehicles\air\noises\SL_unhook_air_ext",1,1,80};
-        slingCargoDetachAir[] = {"slingCargoDetach0","slingCargoDetach1"};
-        slingCargoRopeBreak0[] = {"A3\Sounds_F\vehicles\air\noises\SL_rope_break_int",1,1};
-        slingCargoRopeBreak1[] = {"A3\Sounds_F\vehicles\air\noises\SL_rope_break_ext",1,1,80};
-        slingCargoRopeBreak[] = {"slingCargoDetach0","slingCargoDetach1"};
-        gearUpExt[] = {"A3\Sounds_F\vehicles\air\Heli_Transport_01\gear_up_OUT",1,1,1000};
-        gearUpInt[] = {"A3\Sounds_F\vehicles\air\Heli_Transport_01\gear_up_IN",1,1,100};
-        gearUp[] = {"gearUpInt","gearUpExt"};
-        gearDownInt[] = {"A3\Sounds_F\vehicles\air\Heli_Transport_01\gear_down_IN",1,1,100};
-        gearDownExt[] = {"A3\Sounds_F\vehicles\air\Heli_Transport_01\gear_down_OUT",1,1,1000};
-        gearDown[] = {"gearDownInt","gearDownExt"};
-        availableForSupportTypes[] = {"CAS_Heli","Transport"};
-        enableManualFire = 0;
-        maxSpeed = 268;
-        accuracy = 1.5;
-        cost = 1e+007;
-        armor = 40;
-        damageResistance = 0.00555;
-        irScanRangeMin = 0;
-        irScanRangeMax = 0;
-        irScanToEyeFactor = 1;
-        MainRotorSpeed = -0.5;
-        backRotorSpeed = 3;
-        mainBladeRadius = 5.5;
-        tailBladeRadius = 0.98;
-        maxFordingDepth = 0.7;
-        LockDetectionSystem = "8 + 4";
-        IncommingMisslieDetectionSystem = 16;
-        weapons[] = {"CMFlareLauncher"};
-        magazines[] = {"168Rnd_CMFlare_Chaff_Magazine"};
-        HeadAimDown = -2.1;
-        threat[] = {0.6,0.4,0.1};
-        memoryPointLMissile = "Rocket_1";
-        memoryPointRMissile = "Rocket_2";
-        memoryPointDriverOptics = "slingCamera";
-        washDownStrength = "1.0f";
-        washDownDiameter = "40.0f";
-        minSmokeDamage = 0.3;
-        maxSmokeDamage = 0.99;
-        selectionHRotorStill = "main rotor static";
-        selectionHRotorMove = "main rotor blur";
-        selectionVRotorStill = "tail rotor static";
-        selectionVRotorMove = "tail rotor blur";
-        driverLeftHandAnimName = "lever_pilot";
-        driverRightHandAnimName = "stick_pilot";
-        driverLeftLegAnimName = "pedalL";
-        driverRightLegAnimName = "pedalR";
-        destrType = "DestructWreck";
-        camShakeCoef = 0;
-        simulation = "helicopterrtd";
-        unitInfoTypeRTD = "RscUnitInfoAirRTDFullDigital";
-        unitInfoTypeLite = "RscUnitInfoAirRTDBasic";
-        unitInfoType = "RscUnitInfoAir";
-        vehicleClass = "Air";
-        gearRetracting = 0;
-        dustEffect = "HeliDust";
-        waterEffect = "HeliWater";
-        gearUpTime = 3.33;
-        gearDownTime = 2;
-        gearMinAlt = 0.5;
-        startDuration = 20;
-        maxMainRotorDive = 0;
-        maxBackRotorDive = 0;
-        minMainRotorDive = 0;
-        minBackRotorDive = 0;
-        neutralBackRotorDive = 0;
-        neutralMainRotorDive = 0;
-        liftForceCoef = 1;
-        cyclicAsideForceCoef = 1;
-        cyclicForwardForceCoef = 1;
-        backRotorForceCoef = 1;
-        bodyFrictionCoef = 1;
-        memoryPointLRocket = "L raketa";
-        memoryPointRRocket = "P raketa";
-        memoryPointPilot = "pilot";
-        _mainBladeCenter = "rotor_center";
-        selectionFireAnim = "zasleh";
-        enableSweep = 1;
-        envelope[] = {0,0.2,0.9,2.1,2.5,3.3,3.5,3.6,3.7,3.8,3.8,3,0.9,0.7,0.5};
-        minFireTime = 20;
-        steerAheadSimul = 0.5;
-        steerAheadPlan = 0.7;
-        soundLandingGear[] = {"",1,1};
-        slingLoadMemoryPoint = "slingLoad0";
-        textSingular = "helicopter";
-        textPlural = "helicopters";
-        nameSound = "veh_air_helicopter_s";
-        camouflage = 100;
-        audible = 30;
-        epeImpulseDamageCoef = 50;
-        crewCrashProtection = 0.25;
-        cargoGetInAction[] = {"GetInLow"};
-        cargoGetOutAction[] = {"GetOutLow"};
-        driverCanEject = 0;
-        damageEffect = "AirDestructionEffects";
-        type = 2;
-        transportMaxBackpacks = 1;
-        supplyRadius = 1.2;
-        dammageHalf[] = {};
-        dammageFull[] = {};
-        crewVulnerable = 1;
-        armorStructural = 4;
-        explosionShielding = 4;
-        minTotalDamageThreshold = 0.005;
-        incomingMissileDetectionSystem = 16;
-        mainBladeCenter = "rotor_center";
-        tailBladeCenter = "rotor_02_center";
-        tailBladeVertical = 1;
-        slingLoadMinCargoMass = 0;
-        formationX = 50;
-        formationZ = 100;
-        precision = 100;
-        brakeDistance = 200;
-        formationTime = 10;
-        altFullForce = 2000;
-        altNoForce = 6000;
-        insideSoundCoef = 0.0316228;
-        outsideSoundFilter = 1;
-        occludeSoundsWhenIn = 0.316228;
-        obstructSoundsWhenIn = 0.316228;
-        nightVision = 0;
-        driverCompartments = 0;
-        gunnerCanSee = "31+32";
-        driverCanSee = "31+32";
-        getInRadius = 5;
-        transportMaxMagazines = 20;
-        transportMaxWeapons = 3;
-        enableGPS = 1;
-        weaponsGroup1 = "1 + 2";
-        weaponsGroup2 = 4;
-        weaponsGroup3 = "8 + 16 + 32";
-        weaponsGroup4 = "64 + 128";
-        memoryPointTaskMarkerOffset[] = {0,0.3,0};
-        rightDustEffects[] = {["GdtGrassShort","RDustEffectsAir"],["GdtGrassShort","RGrassEffects"],["GdtGrassTall","RDustEffectsAir"],["GdtGrassTall","RGrassEffects"],["GdtRedDirt","RDustEffectsAirRed"],["GdtField","RDustEffectsAir"],["GdtForest","RDustEffectsAir"],["GdtVolcano","RDustEffectsAir"],["GdtVolcano","RStonesEffects"],["GdtCliff","RDustEffectsAir"],["GdtVolcanoBeach","RDustEffectsAir"],["SurfRoadDirt_exp","RDustEffectsAirRed"],["SurfRoadConcrete_exp","RDustEffectsAir"],["SurfRoadTarmac_exp","RDustEffectsAir"],["GdtStratisConcrete","RDustEffectsAir"],["GdtStratisConcrete","RDirtEffects"],["GdtStratisBeach","RDustEffectsAir"],["GdtStratisBeach","RStonesEffects"],["GdtStratisDirt","RDustEffectsAir"],["GdtStratisDirt","RDirtEffects"],["GdtStratisSeabedCluttered","RDustEffectsAir"],["GdtStratisSeabed","RDustEffectsAir"],["GdtStratisDryGrass","RDustEffectsAir"],["GdtStratisDryGrass","RGrassDryEffects"],["GdtStratisDryGrass","RDirtEffects"],["GdtStratisGreenGrass","RDustEffectsAir"],["GdtStratisGreenGrass","RGrassEffects"],["GdtStratisGreenGrass","RDirtEffects"],["GdtStratisRocky","RDustEffectsAir"],["GdtStratisRocky","RGrassEffects"],["GdtStratisRocky","RDirtEffects"],["GdtStratisThistles","RDustEffectsAir"],["GdtStratisThistles","RGrassEffects"],["GdtStratisThistles","RDirtEffects"],["GdtConcrete","RDustEffectsAir"],["GdtConcrete","RDirtEffects"],["GdtAsphalt","RDustEffectsAir"],["GdtAsphalt","RDirtEffects"],["GdtRubble","RDustEffectsAir"],["GdtRubble","RDirtEffects"],["GdtSoil","RDustEffectsAir"],["GdtSoil","RDirtEffects"],["GdtBeach","RDustEffectsAir"],["GdtBeach","RStonesEffects"],["GdtRock","RDustEffectsAir"],["GdtRock","RDirtEffects"],["GdtDead","RDustEffectsAir"],["GdtDead","RDirtEffects"],["Default","RDustEffectsAir"],["GdtDesert1","RDustEffectsAir"],["GdtDesert1","RSandEffects"],["GdtDesert1","RDirtEffects"],["GdtDesert1","RStonesEffects"],["GdtDesert2","RDustEffectsAir"],["GdtDesert2","RSandEffects"],["GdtDesert2","RGrassEffects"],["GdtDesert2","RDirtEffects"],["GdtDirt","RDustEffectsAir"],["GdtDirt","RDirtEffects"],["GdtGrassGreen","RDustEffectsAir"],["GdtGrassGreen","RGrassEffects"],["GdtGrassGreen","RDirtEffects"],["GdtGrassDry","RDustEffectsAir"],["GdtGrassDry","RGrassDryEffects"],["GdtGrassDry","RDirtEffects"],["GdtGrassWild","RDustEffectsAir"],["GdtGrassWild","RGrassEffects"],["GdtGrassWild","RDirtEffects"],["GdtWildField","RDustEffectsAir"],["GdtWildField","RGrassEffects"],["GdtWildField","RDirtEffects"],["GdtWeed1","RDustEffectsAir"],["GdtWeed1","RGrassEffects"],["GdtWeed1","RDirtEffects"],["GdtWeed2","RDustEffectsAir"],["GdtWeed2","RGrassEffects"],["GdtWeed2","RDirtEffects"],["GdtThorn","RDustEffectsAir"],["GdtThorn","RGrassEffects"],["GdtThorn","RDirtEffects"],["GdtStony","RDustEffectsAir"],["GdtStony","RGrassEffects"],["GdtStony","RDirtEffects"],["GdtStonyGreen","RDustEffectsAir"],["GdtStonyGreen","RGrassEffects"],["GdtStonyGreen","RDirtEffects"],["GdtStonyThistle","RDustEffectsAir"],["GdtStonyThistle","RGrassEffects"],["GdtStonyThistle","RDirtEffects"],["GdtSeabedDeep","RDustEffectsAir"],["GdtSeabed","RDustEffectsAir"],["SurfRoadDirt","RDustEffectsAir"],["SurfRoadConcrete","RDustEffectsAir"],["SurfRoadTarmac","RDustEffectsAir"],["SurfWood","RDustEffectsAir"],["SurfMetal","RDustEffectsAir"],["SurfRoofTin","RDustEffectsAir"],["SurfRoofTiles","RDustEffectsAir"],["SurfIntWood","RDustEffectsAir"],["SurfIntConcrete","RDustEffectsAir"],["SurfIntTiles","RDustEffectsAir"],["SurfIntMetal","RDustEffectsAir"]};
-        leftDustEffects[] = {["GdtGrassShort","LDustEffectsAir"],["GdtGrassShort","LGrassEffects"],["GdtGrassTall","LDustEffectsAir"],["GdtGrassTall","LGrassEffects"],["GdtRedDirt","LDustEffectsAirRed"],["GdtField","LDustEffectsAir"],["GdtForest","LDustEffectsAir"],["GdtVolcano","LDustEffectsAir"],["GdtVolcano","LStonesEffects"],["GdtCliff","LDustEffectsAir"],["GdtVolcanoBeach","LDustEffectsAir"],["SurfRoadDirt_exp","LDustEffectsAirRed"],["SurfRoadConcrete_exp","LDustEffectsAir"],["SurfRoadTarmac_exp","LDustEffectsAir"],["GdtStratisConcrete","LDustEffectsAir"],["GdtStratisConcrete","LDirtEffects"],["GdtStratisBeach","LDustEffectsAir"],["GdtStratisBeach","LStonesEffects"],["GdtStratisDirt","LDustEffectsAir"],["GdtStratisDirt","LDirtEffects"],["GdtStratisSeabedCluttered","LDustEffectsAir"],["GdtStratisSeabed","LDustEffectsAir"],["GdtStratisDryGrass","LDustEffectsAir"],["GdtStratisDryGrass","LGrassDryEffects"],["GdtStratisDryGrass","LDirtEffects"],["GdtStratisGreenGrass","LDustEffectsAir"],["GdtStratisGreenGrass","LGrassEffects"],["GdtStratisGreenGrass","LDirtEffects"],["GdtStratisRocky","LDustEffectsAir"],["GdtStratisRocky","LGrassEffects"],["GdtStratisRocky","LDirtEffects"],["GdtStratisThistles","LDustEffectsAir"],["GdtStratisThistles","LGrassEffects"],["GdtStratisThistles","LDirtEffects"],["GdtConcrete","LDustEffectsAir"],["GdtConcrete","LDirtEffects"],["GdtAsphalt","LDustEffectsAir"],["GdtAsphalt","LDirtEffects"],["GdtRubble","LDustEffectsAir"],["GdtRubble","LGrassEffects"],["GdtRubble","LDirtEffects"],["GdtSoil","LDustEffectsAir"],["GdtSoil","LDirtEffects"],["GdtBeach","LDustEffectsAir"],["GdtBeach","LStonesEffects"],["GdtRock","LDustEffectsAir"],["GdtRock","LDirtEffects"],["GdtDead","LDustEffectsAir"],["GdtDead","LDirtEffects"],["Default","LDustEffectsAir"],["GdtDesert1","LDustEffectsAir"],["GdtDesert1","LSandEffects"],["GdtDesert1","LDirtEffects"],["GdtDesert1","LStonesEffects"],["GdtDesert2","LDustEffectsAir"],["GdtDesert2","LSandEffects"],["GdtDesert2","LGrassEffects"],["GdtDesert2","LDirtEffects"],["GdtDirt","LDustEffectsAir"],["GdtDirt","LDirtEffects"],["GdtGrassGreen","LDustEffectsAir"],["GdtGrassGreen","LGrassEffects"],["GdtGrassGreen","LDirtEffects"],["GdtGrassDry","LDustEffectsAir"],["GdtGrassDry","LGrassDryEffects"],["GdtGrassDry","LDirtEffects"],["GdtGrassWild","LDustEffectsAir"],["GdtGrassWild","LGrassEffects"],["GdtGrassWild","LDirtEffects"],["GdtWildField","LDustEffectsAir"],["GdtWildField","LGrassEffects"],["GdtWildField","LDirtEffects"],["GdtWeed1","LDustEffectsAir"],["GdtWeed1","LGrassEffects"],["GdtWeed1","LDirtEffects"],["GdtWeed2","LDustEffectsAir"],["GdtWeed2","LGrassEffects"],["GdtWeed2","LDirtEffects"],["GdtThorn","LDustEffectsAir"],["GdtThorn","LGrassEffects"],["GdtThorn","LDirtEffects"],["GdtStony","LDustEffectsAir"],["GdtStony","LGrassEffects"],["GdtStony","LDirtEffects"],["GdtStonyGreen","LDustEffectsAir"],["GdtStonyGreen","LGrassEffects"],["GdtStonyGreen","LDirtEffects"],["GdtStonyThistle","LDustEffectsAir"],["GdtStonyThistle","LGrassEffects"],["GdtStonyThistle","LDirtEffects"],["GdtSeabedDeep","LDustEffectsAir"],["GdtSeabed","LDustEffectsAir"],["SurfRoadDirt","LDustEffectsAir"],["SurfRoadConcrete","LDustEffectsAir"],["SurfRoadTarmac","LDustEffectsAir"],["SurfWood","LDustEffectsAir"],["SurfMetal","LDustEffectsAir"],["SurfRoofTin","LDustEffectsAir"],["SurfRoofTiles","LDustEffectsAir"],["SurfIntWood","LDustEffectsAir"],["SurfIntConcrete","LDustEffectsAir"],["SurfIntTiles","LDustEffectsAir"],["SurfIntMetal","LDustEffectsAir"]};
-        waterLeakiness = 100;
-        waterResistance = 1;
-        impactEffectsSea = "ImpactEffectsAir";
-        flareVelocity = 100;
-        memoryPointCM[] = {"flare_launcher1","flare_launcher2"};
-        memoryPointCMDir[] = {"flare_launcher1_dir","flare_launcher2_dir"};
-        minGForce = 0.2;
-        maxGForce = 2;
-        gForceShakeAttenuation = 0.5;
-        secondaryExplosion = -1;
-        fuelExplosionPower = 1;
-        memoryPointsGetInDriver = "pos driver";
-        memoryPointsGetInDriverDir = "pos driver dir";
-        memoryPointsGetInCargo = "pos cargo";
-        memoryPointsGetInCargoDir = "pos cargo dir";
-        memoryPointsGetInCoDriver = "pos codriver";
-        memoryPointsGetInCoDriverDir = "pos codriver dir";
-        memoryPointsGetInDriverPrecise = "pos driver";
-        memoryPointsGetInCargoPrecise[] = {"pos cargo"};
-        memoryPointsLeftWaterEffect = "waterEffectL";
-        memoryPointsRightWaterEffect = "waterEffectR";
-        selectionClan = "clan";
-        selectionDashboard = "podsvit pristroju";
-        selectionShowDamage = "poskozeni";
-        selectionBackLights = "zadni svetlo";
-        tracksSpeed = 0;
-        selectionLeftOffset = "";
-        selectionRightOffset = "";
-        driverDoor = "";
-        cargoDoors[] = {};
-        hasTerminal = 0;
-        getInOutOnProxy = 0;
-        cargoPreciseGetInOut[] = {0};
-        waterPPInVehicle = 1;
-        htMin = 60;
-        htMax = 1800;
-        afMax = 200;
-        mfMax = 100;
-        mFact = 0.2;
-        tBody = 150;
-        impactEffectSpeedLimit = 8;
-        showCrewAim = 0;
-        curatorInfoType = "RscDisplayAttributesVehicle";
-        curatorInfoTypeEmpty = "RscDisplayAttributesVehicleEmpty";
-        access = 0;
-        reversed = 1;
-        autocenter = 1;
-        animated = 1;
-        shadow = 1;
-        featureSize = 0;
-        speechSingular[] = {};
-        speechPlural[] = {};
-        maxDetectRange = 20;
-        detectSkill = 20;
-        mineAlertIconRange = 200;
-        killFriendlyExpCoef = 1;
-        weaponSlots = 0;
-        spotableDarkNightLightsOff = 0.001;
-        spotableNightLightsOff = 0.02;
-        spotableNightLightsOn = 4;
-        accuracyDarkNightLightsOff = 0.001;
-        accuracyNightLightsOff = 0.006;
-        accuracyNightLightsOn = 0.1;
-        obstructSoundLFRatio = 0;
-        occludeSoundLFRatio = 0.25;
-        unloadInCombat = 0;
-        antiRollbarForceCoef = 0;
-        antiRollbarForceLimit = 5;
-        antiRollbarSpeedMin = 20;
-        antiRollbarSpeedMax = 60;
-        slowSpeedForwardCoef = 0.3;
-        normalSpeedForwardCoef = 0.85;
-        gunnerHasFlares = 1;
-        sensitivity = 2.5;
-        sensitivityEar = 0.0075;
-        portrait = "";
-        ghostPreview = "";
-        armorLights = 0.4;
-        replaceDamaged = "";
-        replaceDamagedLimit = 0.9;
-        replaceDamagedHitpoints[] = {};
-        keepInEPESceneAfterDeath = 0;
-        extCameraPosition[] = {0,2,-20};
-        groupCameraPosition[] = {0,5,-30};
-        cameraSmoothSpeed = 5;
-        predictTurnSimul = 1.2;
-        predictTurnPlan = 1;
-        indirectHitEnemyCoefAI = 10;
-        indirectHitFriendlyCoefAI = -20;
-        indirectHitCivilianCoefAI = -20;
-        indirectHitUnknownCoefAI = -0.5;
-        alwaysTarget = 0;
-        irTarget = 1;
-        irScanGround = 1;
-        laserTarget = 0;
-        laserScanner = 0;
-        nvTarget = 0;
-        nvScanner = 0;
-        artilleryTarget = 0;
-        artilleryScanner = 0;
-        canUseScanners = 1;
-        preferRoads = 0;
-        hideUnitInfo = 0;
-        commanderCanSee = 31;
-        limitedSpeedCoef = 0.22;
-        hasDriver = 1;
-        driverForceOptics = 0;
-        memoryPointSupply = "doplnovani";
-        enableWatch = 0;
-        enableRadio = 0;
-        usePreciseGetInAction = 0;
-        allowTabLock = 1;
-        showAllTargets = 0;
-        dustFrontLeftPos = "dustFrontLeft";
-        dustFrontRightPos = "dustFrontRight";
-        dustBackLeftPos = "dustBackLeft";
-        dustBackRightPos = "dustBackRight";
-        wheelCircumference = 1;
-        waterResistanceCoef = 0.5;
-        waterLinearDampingCoefX = 0;
-        waterLinearDampingCoefY = 0;
-        waterAngularDampingCoef = 0;
-        showNVGDriver = 0;
-        showNVGCommander = 0;
-        showNVGGunner = 0;
-        showNVGCargo[] = {0};
-        soundAttenuationCargo[] = {1};
-        countsForScoreboard = 1;
-        transportAmmo = 0;
-        transportFuel = 0;
-        transportRepair = 0;
-        transportVehiclesCount = 0;
-        transportVehiclesMass = 0;
-        attendant = 0;
-        engineer = 0;
-        uavHacker = 0;
-        soundEngine[] = {"",1,1};
-        soundEnviron[] = {"",1,1};
-        soundCrash[] = {"",0.316228,1};
-        soundLandCrash[] = {"",1,1};
-        soundWaterCrash[] = {"",0.177828,1};
-        soundServo[] = {"",0.00316228,0.5};
-        soundElevation[] = {"",1,0.5};
-        sounddamage[] = {"",1,1};
-        soundGearUp[] = {"",1,1};
-        soundGearDown[] = {"",1,1};
-        soundFlapsUp[] = {"",1,1};
-        soundFlapsDown[] = {"",1,1};
-        aggregateReflectors[] = {};
-        cargoIsCoDriver[] = {0};
-        driverOpticsModel = "";
-        driverOpticsEffect[] = {};
-        driverOpticsColor[] = {1,1,1,1};
-        hideProxyInCombat = 0;
-        forceHideDriver = 0;
-        canHideDriver = -1;
-        castDriverShadow = 0;
-        castCargoShadow = 0;
-        viewDriverShadow = 1;
-        viewDriverShadowDiff = 1;
-        viewDriverShadowAmb = 1;
-        viewCargoShadow = 1;
-        viewCargoShadowDiff = 1;
-        viewCargoShadowAmb = 1;
-        ejectDeadDriver = 0;
-        ejectDeadCargo = 0;
-        hiddenSelectionsMaterials[] = {};
-        hiddenUnderwaterSelections[] = {};
-        shownUnderWaterSelections[] = {};
-        hiddenUnderwaterSelectionsTextures[] = {};
-        selectionDamage = "zbytek";
-        cargoCanEject = 1;
-        fireResistance = 10;
-        airCapacity = 10;
-        waterDamageEngine = 0.2;
-        damageTexDelay = 0;
-        coefInside = 2;
-        coefInsideHeur = 2;
-        coefSpeedInside = 2;
-        windSockExist = 0;
-        slingLoadCargoMemoryPoints[] = {};
-        slingLoadCargoMemoryPointsDir[] = {};
-        numberPhysicalWheels = 0;
-        damageHalf[] = {};
-        damageFull[] = {};
-        insideDetectCoef = 0.05;
-    };
+class CfgVehicles
+{
+	class Helicopter;
+	class Helicopter_Base_F: Helicopter
+	{
+		class Turrets;
+	};
+
+	class Helicopter_Base_H: Helicopter_Base_F
+	{
+		class Turrets: Turrets
+		{
+			class CopilotTurret;
+		};
+		class AnimationSources;
+		class Eventhandlers;
+		class Viewoptics;
+		class ViewPilot;
+		class RotorLibHelicopterProperties;
+		class CargoTurret;
+		class Reflectors
+		{
+			class Right;
+		};
+	};
+
+	class Test_Heli_01_base_F: Helicopter_Base_H
+	{
+        scope = 0;																// scope 2 means it is available in editor
+        scopeCurator = 0;														// 2 means available from Zeus, whereas 0 means hidden
+		armor = 30;																// just some protection against missiles, collisions and explosions
+		altFullForce = 4000;													// in what height do the engines still have full thrust
+		altNoForce = 6000;														// thrust of the engines interpolates to zero between altFullForce and altNoForce
+		maxSpeed = 300;															// what is the maximum speed of the vehicle
+		maxFordingDepth = 0.55;													// how deep could the vehicle be in water without getting some damage
+		mainBladeRadius = 7.0;													// describes the radius of main rotor - used for collision detection
+		liftForceCoef = 1.1;													//multiplier of lift force
+		bodyFrictionCoef = 0.7;													//multiplier of body friction
+		cyclicAsideForceCoef = 1.0;												//multiplier of bank force
+		cyclicForwardForceCoef = 1.0;											//multiplier of dive force
+		backRotorForceCoef = 1.0;												//multiplier of back rotor force
+
+		accuracy = 0.8;															// how hard it is to distinguish the type of the vehicle (bigger number means harder)
+		model = \x\grad_h145m\addons\helo\data\model\h145m.p3d; 									// path to model of the heli
+		driveOnComponent[] = {"Wheels"};
+
+		icon = "\A3\Air_F\Heli_Light_02\Data\UI\Map_Heli_Light_02_CA.paa";		// icon in map/editor
+		picture = "\A3\Air_F\Heli_Light_02\Data\UI\Heli_Light_02_CA.paa";		// small picture in command menu
+
+		driverAction = pilot_Heli_Light_02;										// what is the standard pose for the pilot, defined as animation state
+		driverInAction = pilot_Heli_Light_02;									// what is the standard pose for the pilot, defined as animation state
+		precisegetinout = 1;													// describes what style of get in is used (0 - non-precise; 1 - precise on proxy; 2 - precise on model center)
+		GetInAction = pilot_Heli_Light_02_Enter;								// what action uses the pilot to get in the heli, it uses "switchAction" script command on the proxy
+		GetOutAction = pilot_Heli_Light_02_Exit;								// what action uses the pilot to get out of heli
+		cargoGetInAction[] = {"GetInHelicopterCargo"};							// actions for the cargo, the last one in array is used for the rest
+		cargoGetOutAction[] = {"GetOutHelicopterCargo"};						// that means every cargo position could use different action to get in
+		transportSoldier = 7;													// how many cargo positions are available
+		cargoAction[] = { 														// the same array as getIn/getOut actions for actions to switch to for cargo while inside the heli
+			passenger_apc_narrow_generic03,
+			passenger_apc_generic02,
+			passenger_apc_narrow_generic01,
+			passenger_apc_generic04,
+			passenger_apc_narrow_generic02,
+			passenger_generic01_leanright,
+			passenger_generic01_leanleft,
+			passenger_generic01_foldhands
+		};
+
+		cargoIsCoDriver[] = {0, 0}; 											// the cargo don't utilize some special memory points to get in
+		memoryPointsGetInCargo = "pos cargo";									// on what memory points should the cargo get in the heli
+		memoryPointsGetInCargoDir = "pos cargo dir";							// what is the direction of the cargo facing during get in animation (and opposite for get out)
+		hideWeaponsCargo = 1;													// this makes the poses easier and adds some performance gain because the proxies don't need to be drawn
+		cargoProxyIndexes[] = {1,2,3,4,5,6,7};									// what indexes does regular cargo sit on
+
+		class TransportBackpacks												// adds various backpacks to cargo hold of the heli
+		{
+		};
+		class TransportItems													// adds various items to cargo hold of the heli
+		{
+		};
+		maximumLoad = 2000;														// capacity of cargo inventory for backpacks and various other items
+		cargoCanEject = 1;														// cargo should be able to grab a chute and drop out of the vehicle
+		driverCanEject = 0;														// pilot shouldn't be able to do so as he doesn't have eject seat
+
+		class Exhausts															// describes the particle effects fro exhausts
+		{
+			class Exhaust1														// there may be as many exhausts as you wish, bear in mind the particle limitation and performance
+			{
+				position = "exhaust1";											// on what position should the particle effect start
+				direction = "exhaust1_dir";										// what is the default direction of the particle effect
+				effect = "ExhaustsEffectHeliMed";								// what class of particle effect is going to be used
+			};
+			class Exhaust2
+			{
+				position = "exhaust2";
+				direction = "exhaust2_dir";
+				effect = "ExhaustsEffectHeliMed";
+			};
+		};
+
+		memoryPointLMissile = "Rocket_1";										// from what memory point should the even missiles start
+		memoryPointRMissile = "Rocket_1";										// from what memory point should the odd missiles start
+		memoryPointGun = "machinegun_end";										// from what memory point should the bullets start
+
+		LockDetectionSystem = 4 + 8;											// this uses macros from basicDefines_A3, just add more to gain more systems for the vehicle
+		incomingMissileDetectionSystem = CM_Missile;							// for example CM_Lock_Laser + CM_Lock_Radar, parser is able to evaluate that, or simply 12 in that case
+		selectionFireAnim = "muzzleFlash";										// what selection is hidden when machinegun doesn't shoot
+
+		weapons[] = {CMFlareLauncher};											// array of various vehicle weapons mounted on the heli
+		magazines[] = {168Rnd_CMFlare_Chaff_Magazine}; 							// array of corresponding magazines
+
+		class ViewPilot: ViewPilot 												// describes what does the pilot see using bare eyes
+		{
+			initFov = 0.75; 													// this is the standard field of view angle for soldier, bit more narrow than a real-life one
+			minFov = 0.375; 													// this is how much can people "zoom" their view via focusing on something
+			maxFov = 1.1;														// this is how wide can the field of view be
+		};
+
+		class Viewoptics: Viewoptics 											// pilot doesn't use optics in this vehicle
+		{
+			initAngleX = 0; 													// initial horizontal angle of the optics view relative to proxy position of pilot
+			minAngleX = 0; 														// maximum turn to the left relative to proxy position of pilot
+			maxAngleX = 0;														// maximum turn to the right relative to proxy position of pilot
+			initAngleY = 0; 													// initial vertical angle of the optics view relative to proxy position of pilot
+			minAngleY = 0; 														// maximum elevation down relative to proxy position of pilot
+			maxAngleY = 0;														// maximum elevation up relative to proxy position of pilot
+			initFov = 0.1; 														// the same functionality as in ViewPilot
+			minFov = 0.1;  														// the same functionality as in ViewPilot
+			maxFov = 1.2; 														// the same functionality as in ViewPilot
+		};
+
+		class pilotCamera														// camera for pilot to observe sling loading
+        {
+            class OpticsIn														// what is seen if player switches to optics
+            {
+                class Wide
+                {
+                    opticsDisplayName 	= "W";									// used in case the UI has place to display optics mode
+                    initAngleX			= 0;									// X-axis rotation and its limits
+					minAngleX			= -0; 									// X-axis rotation and its limits
+					maxAngleX			= +0;									// X-axis rotation and its limits
+                    initAngleY			= 0; 									// Y-axis rotation and its limits
+					minAngleY			= -0;  									// Y-axis rotation and its limits
+					maxAngleY			= +0; 									// Y-axis rotation and its limits
+                    initFov				= 0.5;									// Field of view size settings
+					minFov				= 0.5;									// Field of view size settings
+					maxFov				= 0.5;									// Field of view size settings
+                    visionMode[] 		= {"Normal","NVG"};						// what vision modes are available
+                    thermalMode[] 		= {0,1};								// not necessary as there is no TI mode defined, but just in case
+                    gunnerOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d"; // some optics model
+				};
+				showMiniMapInOptics				= false;						// allows showing GPS mini map in optics
+				showUAVViewpInOptics			= false;						// allows showing UAV feed in this optics
+				showSlingLoadManagerInOptics 	= true;							// allows displaying of Sling Loading Assistant
+            };
+            minTurn                 = 0; 										//turn
+            maxTurn                 = 0; 										//turn
+            initTurn                = 0; 										//turn
+            minElev                 = 80; 										//turn
+            maxElev                 = 80; 										//turn
+            initElev                = 80; 										//turn
+            maxXRotSpeed            = 0.5; 										// movement speed
+            maxYRotSpeed            = 0.5; 										// movement speed
+            pilotOpticsShowCursor   = 1; 										//to show aimCursor (is useful to see plane direction)
+            controllable            = false; 									// set false to have static camera, true to have moving like a turret
+        };
+        memoryPointDriverOptics = "slingCamera";								// what memory point is the origin of the camera
+		slingLoadMaxCargoMass 	= 500;											// maximum weight of cargo for this chopper
+		slingLoadMemoryPoint 	= "slingLoad0";									// memory point for sling load to attach ropes to
+
+		class Turrets: Turrets													// just a copilot seat as a turret to enable taking the controls
+		{
+			class CopilotTurret: CopilotTurret									// taking controls is already defined in parent class
+			{
+				gunnerAction = copilot_Heli_Light_02;							// what action does copilot switch to
+				gunnerInAction = copilot_Heli_Light_02;							// what action does copilot switch to
+				precisegetinout = 1;											// describes what style of get in is used (0 - non-precise; 1 - precise on proxy; 2 - precise on model center)
+				gunnerGetInAction = copilot_Heli_Light_02_Enter;				// what action uses the copilot to get in the heli, it uses "switchAction" script command on the proxy
+				gunnerGetOutAction = copilot_Heli_Light_02_Exit;				// what action uses the copilot to get out the heli
+				memoryPointsGetInCargo = "pos copilot";							// what is the position of get in action
+				memoryPointsGetInCargoDir = "pos copilot dir";					// what is the direction of get in action
+				canEject = 0;													// copilot shouldn't be able to do so as he doesn't have eject seat
+				minElev = -50; 													// what is the lowest possible elevation of the turret
+				maxElev = +30;  												// what is the highest possible elevation of the turret
+				initElev = 11; 													// what is the starting elevation of the turret
+				minTurn = -170;  												// what is the right-most possible turn of the turret
+				maxTurn = 170;  												// what is the left-most possible turn of the turret
+				initTurn = 0; 													// what is the default horizontal turn of the turret
+				gunnerLeftHandAnimName = "lever_copilot";						// what bone in model is the left hand connected to via IK (pilot has it set by default in parent class)
+				gunnerRightHandAnimName = "stick_copilot";						// what bone in model is the right hand connected to via IK (pilot has it set by default in parent class)
+				maxHorizontalRotSpeed = 3;										// how fast is the copilot able to look around (higher means faster)
+				maxVerticalRotSpeed = 3;										// how fast is the copilot able to look around (higher means faster)
+			};
+
+			class CargoTurret_01: CargoTurret 									// position for Firing from Vehicles
+			{
+				gunnerAction 				= "passenger_inside_1";				// generic animation for sitting inside with rifle ready
+				gunnerCompartments 			= "Compartment2";					// gunner is not able to switch seats
+				memoryPointsGetInGunner 	= "pos cargo L";					// specific memory points to allow choice of position
+				memoryPointsGetInGunnerDir 	= "pos cargo L dir";				// direction of get in action
+				gunnerName 					= "Passenger (left door)";			// name of the position in the Action menu
+				proxyIndex 					= 8;								// what cargo proxy is used according to index in the model
+				maxElev 					= 15;								// what is the highest possible elevation of the turret
+				minElev 					= -25;								// what is the lowest possible elevation of the turret
+				maxTurn 					= 45;								// what is the left-most possible turn of the turret
+				minTurn 					= -15;								// what is the right-most possible turn of the turret
+				isPersonTurret 				= 1;								// enables firing from vehicle functionality
+				ejectDeadGunner 			= 0;								// seatbelts included
+				enabledByAnimationSource 	= "Doors";							// doesn't work unless the said animation source is 1
+			};
+		};
+
+		class Damage															// damage changes material in specific places (visual in hitPoint)
+		{
+			tex[] = {};
+			mat[] =
+			{
+				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext.rvmat",			// material mapped in model
+				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_damage.rvmat",	// changes to this one once damage of the part reaches 0.5
+				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_destruct.rvmat",	// changes to this one once damage of the part reaches 1
+
+				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_glass.rvmat",
+				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_glass_damage.rvmat",
+				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_glass_destruct.rvmat",
+
+				"A3\data_F\default.rvmat",
+				"A3\data_F\default.rvmat",
+				"A3\data_F\default_destruct.rvmat"
+			};
+		};
+
+		#include "sounds.hpp" 													// sounds are included in separate file
+
+		class AnimationSources: AnimationSources								// custom made animation sources
+		{
+			class Doors															// the class name is later used in model.cfg
+			{
+				source = door;													// door source means it is used by animateDoor script command
+				animPeriod = 1;													// how long does it take to change value from 0 to 1 (or vice versa)
+				initPhase = 0;													// what value does it have while creating the vehicle
+			};
+			class HideWeapon
+			{
+				source = "user";
+				animPeriod = 0.00001;
+				initPhase = 0;
+			};
+			class Proxy
+			{
+				source		 = "user";
+				animPeriod	 = 1;
+				initPhase	 = 0;
+			};
+		};
+		hiddenSelections[] = 													// we want to allow changing of colours, this defines on what selection are the textures used
+		{
+			"camo1"
+		};
+
+		class UserActions 														// actions available for player to interact with vehicle via action menu running scripts
+		{
+			class Door_Open
+			{
+				userActionID 		= 60;										// ID for some scripts
+				displayName 		= "Open door";								// what is displayed in action menu
+				displayNameDefault 	= "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />"; // what is displayed under the cursor (icon in this case)
+				position 			= "";										// start of radius where action is available
+				condition 			= "this doorPhase ""Doors"" < 0.5 AND Alive(this) AND (player in crew this)"; // only openable from inside and when closed
+				statement 			= "this animateDoor ['Doors', 1]";			// sets animation source Doors to 1 via interpolation
+				priority 			= 1.5;										// higher priority means higher in the Action menu
+				radius 				= 1.5;										// how far from position is the action available
+				showWindow 			= 0;										// 0 means that it is not a default action when entering the vehicle
+				onlyForPlayer 		= 1;										// AI doesn't use this one
+				shortcut 			= "";										// there's no shortcut for this action
+			};
+
+			class Door_Close: Door_Open
+			{
+				userActionID 		= 61;
+				displayName 		= "Close door";
+				textToolTip 		= "Close door";
+				condition	 		= "this doorPhase ""Doors"" > 0.5 AND Alive(this) AND (player in crew this)";
+				statement 			= "this animateDoor ['Doors', 0]";
+			};
+		};
+
+		class Reflectors: Reflectors											// landing lights of the heli, turned on by AI while in night and "careless" or "safe"
+		{
+			class Right
+			{
+				color[] = {7000,7500,10000};									// defines red, green, blue and alpha components of the light
+				ambient[] = {70,75,100};										// the same definition format for colouring the environment around
+				intensity = 50;													// how much does the light shine (in some strange units, just tweak until it is satisfying), rough approximation is intensity = (brightness * 50) ^ 2
+				size = 1;														// defines the visible size of light, has not much of an effect now
+				innerAngle = 15;												// angle from light direction vector where the light is at full strength
+				outerAngle = 65;												// angle from light direction vector where the light is completely faded out
+				coneFadeCoef = 10;												// coefficient of fading the light between inner and outer cone angles
+
+				position = "Light_R_pos";										// name of memory point in model to take the origin of the light
+				direction = "Light_R_dir";										// name of memory point in the model to make a vector of direction of light from it's position
+				hitpoint = "Light_R_hitpoint";									// name of hitpoint selection in hitpoint lod of the model to be affected by damage
+				selection = "Light_R";											// name of selection in visual lods of the model that are going to be hidden while the light is off
+
+				useFlare = true;												// boolean switch if the light produces flare or not
+				flareSize = 10;													// how big is the flare, using the same metrics as intensity
+				flareMaxDistance = 250;											// maximum distance where the flare is drawn
+
+				dayLight = false;												// boolean switch if the light is used during day or not
+
+				class Attenuation
+				{
+					start = 0;													// offset of start of the attenuation
+					constant = 0;												// constant attenuation of the light in any distance from source
+					linear = 1;													// coefficient for linear attenuation
+					quadratic = 1;												// coefficient for attenuation with square of distance from source
+
+					hardLimitStart = 100;										// distance from source where the light intensity decreases for drawing
+					hardLimitEnd = 200;											// distance from source where the light is not displayed (shorter distances increase performance)
+				};
+			};
+
+			class Left: Right
+			{
+				position = "Light_L_pos";
+				direction = "Light_L_dir";
+				hitpoint = "Light_L_hitpoint";
+				selection = "Light_L";
+			};
+		};
+		aggregateReflectors[] = {{"Left", "Right"}};							// aggregates both sources into one to increase performance
+		#include "rtd.hpp" 														// Advanced FM characteristics in separate file to make the config cleaner
+	};
+
+	class B_H145M: Test_Heli_01_base_F
+	{
+		scope = 2;																// scope 2 means it is available in editor, this is one of the macros in basicdefines_a3.hpp
+		scopeCurator = 2;														// 2 means available from Zeus, whereas 0 means hidden
+		side = 1;																// 3 stands for civilians, 0 is OPFOR, 1 is BLUFOR, 2 means guerrillas
+		faction	= CIV_F;														// defines the faction inside of the side
+        displayName = "H145M"; 													// how is the heli displayed in editor
+		crew = "Test_Soldier_F";												// lets use the sample soldier we have as default captain of the boat
+		accuracy = 1.50; 														// harder to distinguish side than vehicle type
+
+		icon = "\A3\Air_F\Heli_Light_02\Data\UI\Map_Heli_Light_02_rockets_CA.paa";	// icon in map/editor
+		picture = "\A3\Air_F\Heli_Light_02\Data\UI\Heli_Light_02_rockets_CA.paa";	// small picture in command menu
+
+		hiddenSelectionsTextures[] = 											// changes of textures to distinguish variants in same order as hiddenSelections[]
+		{
+			"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_CO"
+		};
+		availableForSupportTypes[] = {"Drop", "Transport"};						// use any number of expressions from "Artillery", "CAS_Heli", "CAS_Bombing", "Drop", "Transport"
+		cost = 2000000;															// we need some high cost for such vehicles to be prioritized by AA defences
+	};
+
+	class C_EC135: Test_Heli_01_base_F
+	{
+		scope = 2;																// scope 2 means it is available in editor
+		scopeCurator = 2;														// 2 means available from Zeus, whereas 0 means hidden
+		side = 3;																// 3 stands for civilians, 0 is OPFOR, 1 is BLUFOR, 2 means guerrillas
+		faction	= CIV_F;														// defines the faction inside of the side
+        displayName = "EC135"; 													// how is the heli displayed in editor
+		crew = "Test_Soldier_F";												// lets use the sample soldier we have as default captain of the boat
+		accuracy = 1.50; 														// harder to distinguish side than vehicle type
+		weapons[] = {};															// no weapons
+		magazines[] = {};														// no magazines
+		hiddenSelectionsTextures[] = 											// changes of textures to distinguish variants in same order as hiddenSelections[]
+		{
+			"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"
+		};
+		availableForSupportTypes[] = {"Drop", "Transport"};						// use any number of expressions from "Artillery", "CAS_Heli", "CAS_Bombing", "Drop", "Transport"
+
+		class AnimationSources: AnimationSources								// custom made animation sources, takes most parameters from parent
+		{
+			class Proxy: Proxy
+			{
+				initPhase	 = 1;
+			};
+		};
+		cost = 900000;															// we need some high cost for such vehicles to be prioritized by AA defences
+	};
 };
